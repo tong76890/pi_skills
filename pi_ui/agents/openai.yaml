@@ -1,0 +1,3 @@
+interface:
+  display_name: "界面验收"
+  short_description: "对 Qt、MFC、Web 界面的自定义新增或修改执行交付前审查"
