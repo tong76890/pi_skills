@@ -7,6 +7,7 @@ pi 维护的 **Codex 技能集合**。一个文件夹对应一个 skill，各技
 | 技能 | 用途 | 使用说明 | 调用 |
 | --- | --- | --- | --- |
 | pi_ui | Qt、MFC/Win32、Web 界面自定义新增或修改的交付前审查 | [说明](pi_ui/README.md) · [规则](pi_ui/SKILL.md) | `$pi_ui` |
+| pi_review_quality_guardrails | 自动开发中的局部审查修复、goal 完成前独立验收 | [说明](pi_review_quality_guardrails/README.md) · [规则](pi_review_quality_guardrails/SKILL.md) | `$pi_review_quality_guardrails` |
 
 新增技能会持续加入此表。每个技能的适用范围、依赖和示例以其目录内说明为准。
 
