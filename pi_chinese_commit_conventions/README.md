@@ -23,4 +23,15 @@
 
 按仓库首页的 [Codex 安装说明](../README.md#安装到-codex) 安装 `pi_chinese_commit_conventions`。
 
+安装技能后，将以下规则追加到 Codex 生效的全局指令文件，保留已有内容：默认目录为 `~/.codex/`；设置了 `CODEX_HOME` 时使用 `$CODEX_HOME/`。若同目录的 `AGENTS.override.md` 存在且非空，Codex 会优先读取它，将规则追加到该文件；否则将规则追加到 `AGENTS.md`，文件不存在时创建。
+
+```markdown
+## Git 提交规范
+
+执行 Git 提交或生成、修改提交信息时，必须使用 `$pi_chinese_commit_conventions` 技能。
+该技能不可用时，明确报告并暂停这些操作。
+```
+
+该配置由安装者手动加入；仅复制技能目录不会自动修改 `AGENTS.md`。详见 [Codex `AGENTS.md` 说明](https://developers.openai.com/codex/guides/agents-md)。
+
 生成提交信息时需要能查看实际 Git 差异；执行提交需要 Git。技能中的 commitlint、Husky 和 changelog 配置是可选落地示例，使用这些示例需要 Node.js、npm 及对应依赖；安装技能不会自动安装或配置这些工具。
