@@ -1,5 +1,5 @@
 ---
-name: chinese-commit-conventions
+name: pi_chinese_commit_conventions
 description: 当用户要求提交代码或文档、执行 git commit、生成或修改提交信息时使用。根据实际 Git 差异生成中文 Conventional Commits 提交信息；对复杂或有影响范围的变更生成详细正文，说明修改原因、具体改动、影响范围和验证情况。
 license: MIT
 metadata:

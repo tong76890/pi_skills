@@ -8,7 +8,7 @@ pi 维护的 **Codex 技能集合**。一个文件夹对应一个 skill，各技
 | --- | --- | --- | --- |
 | pi_ui | Qt、MFC/Win32、Web 界面自定义新增或修改的交付前审查 | [说明](pi_ui/README.md) · [规则](pi_ui/SKILL.md) | `$pi_ui` |
 | pi_review_quality_guardrails | 自动开发中的局部审查修复、goal 完成前独立验收 | [说明](pi_review_quality_guardrails/README.md) · [规则](pi_review_quality_guardrails/SKILL.md) | `$pi_review_quality_guardrails` |
-| chinese-commit-conventions | 按中文 Conventional Commits 规范生成提交信息 | [说明](chinese-commit-conventions/README.md) · [规则](chinese-commit-conventions/SKILL.md) | `$chinese-commit-conventions` |
+| pi_chinese_commit_conventions | 按中文 Conventional Commits 规范生成提交信息 | [说明](pi_chinese_commit_conventions/README.md) · [规则](pi_chinese_commit_conventions/SKILL.md) | `$pi_chinese_commit_conventions` |
 
 新增技能会持续加入此表。每个技能的适用范围、依赖和示例以其目录内说明为准。
 
@@ -143,7 +143,7 @@ git -C pi_skills pull --ff-only
 
 ## 添加新技能
 
-1. 在仓库根目录创建独立的技能文件夹；自有技能使用 `pi_名称/`，收录已有技能时可保留原名。
+1. 在仓库根目录创建独立的 `pi_名称/` 文件夹。
 2. 添加 `SKILL.md`，包含一致的 `name`、准确的 `description` 和执行规则。
 3. 添加面向使用者的 `README.md`，说明用途、触发条件、调用示例和实际依赖。
 4. 按需添加 `agents/`、`references/`、`scripts/` 或 `assets/`，不创建无用占位文件。
@@ -151,6 +151,6 @@ git -C pi_skills pull --ff-only
 
 ## 兼容说明
 
-本仓库自有技能保留 `pi_` 前缀，收录的 `chinese-commit-conventions` 保留原名。`pi_ui` 已在作者当前 Codex 环境中被发现；部分创建工具的校验器只接受连字符命名，会对下划线报错，这是已知命名兼容差异，不代表通过所有版本或第三方工具验证。
+本仓库保留 `pi_` 前缀。`pi_ui` 已在作者当前 Codex 环境中被发现；部分创建工具的校验器只接受连字符命名，会对下划线报错，这是已知命名兼容差异，不代表通过所有版本或第三方工具验证。
 
 当前仅维护 Codex 适配。安装目录与发现机制以 [官方文档](https://developers.openai.com/codex/skills/) 和实际使用版本为准。
